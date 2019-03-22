@@ -23,13 +23,8 @@ const Card = ({ currentCard }) => {
                     favoriteMovies.map(movie => {return <li><h3>{movie}</h3></li>})
                 }
             </ol>
-
          </div>
     )
 }
   
-
-
-
-
 export default Card

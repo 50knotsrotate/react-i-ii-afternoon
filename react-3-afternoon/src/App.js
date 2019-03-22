@@ -17,22 +17,18 @@ class App extends Component {
   
   componentWillMount() {
     this.setState({
-      currentData: data[this.state.dataIndex],
-      dataLength: this.state.data.length
+      currentData: data[this.state.dataIndex]
     })
     
   }
 
-
-
-  changeCard(upOrDown) { 
+  changeCard(val) { 
     var newIndex;
-    upOrDown == 'up' ? newIndex = (this.state.dataIndex + 1) % 25 : newIndex = this.state.dataIndex > 0 ? this.state.dataIndex -1 : newIndex = 24
+    val == 'up' ? newIndex = (this.state.dataIndex + 1) % 25 : newIndex = this.state.dataIndex > 0 ? this.state.dataIndex -1 : newIndex = 24
     this.setState({
       dataIndex: newIndex,
       currentData: data[newIndex]
     })
-    console.log(this.state.dataIndex)
   }
 
   render() {
