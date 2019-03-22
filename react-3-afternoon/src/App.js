@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
 import Card from './components/Card'
@@ -11,14 +10,15 @@ class App extends Component {
     super()
     this.state = {
       dataIndex: 0,
-      data,
+      data: data,
       currentData: null
     }
   }
   
   componentWillMount() {
     this.setState({
-      currentData: data[this.state.dataIndex]
+      currentData: data[this.state.dataIndex],
+      dataLength: this.state.data.length
     })
     
   }
@@ -27,11 +27,12 @@ class App extends Component {
 
   changeCard(upOrDown) { 
     var newIndex;
-    upOrDown == 'up' ? newIndex = this.state.dataIndex + 1 : newIndex = this.state.dataIndex -1
+    upOrDown == 'up' ? newIndex = (this.state.dataIndex + 1) % 25 : newIndex = this.state.dataIndex > 0 ? this.state.dataIndex -1 : newIndex = 24
     this.setState({
       dataIndex: newIndex,
       currentData: data[newIndex]
     })
+    console.log(this.state.dataIndex)
   }
 
   render() {
@@ -51,5 +52,26 @@ class App extends Component {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App;
