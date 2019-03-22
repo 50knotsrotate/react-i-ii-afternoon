@@ -1,6 +1,37 @@
 .App {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.card-whole {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.buttons {
+  height: 40%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.navigate {
+  color: white;
+  font-size: 1.5em;
+  margin: 0px 10px;
+}
+
+.navigate:hover{
+  cursor: pointer;
+} 
+
+.movie-list {
+  list-style-type: none;
 }
 
 .header {
@@ -12,4 +43,9 @@
 
 .header h1 {
   margin-left: 50px;
+}
+
+.main-card, .buttons {
+  text-align: center;
+  margin-top: 100px;
 }

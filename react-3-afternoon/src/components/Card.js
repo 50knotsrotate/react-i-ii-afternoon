@@ -24,7 +24,7 @@ class Card extends Component {
                 <h2>{`JOB TITLE: ${title}`}</h2>
                 <h2>{`EMPLOYER: ${employer}`}</h2>
                 <h2>Favorite Movies</h2>
-                <ul>
+                <ul className  = 'movie-list'>
                     {favoriteMovies.map(movie => { 
                         return <li key={Math.random()}>{movie}</li>
                     })}

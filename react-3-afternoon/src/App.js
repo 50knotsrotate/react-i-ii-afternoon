@@ -37,14 +37,16 @@ class App extends Component {
   render() {
     return (
       <div className = 'App'>
+      
         <Header />
+        < div className = 'card-whole' >
         <Card
           currentCard={this.state.currentData}
         />
         <Buttons
           changeCard={this.changeCard.bind(this)}
         />
-        
+        </div>
       </div>
     );
   }

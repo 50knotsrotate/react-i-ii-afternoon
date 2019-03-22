@@ -3,8 +3,8 @@ import React from 'react';
 const Buttons = (props) => { 
     return (
         <div className='buttons'>
-            <button className='decrement-button' onClick={() => props.changeCard('down')}>Back</button>
-            <button className='decrement-button' onClick={() => props.changeCard('up')}>Next</button>
+            <h2 className = 'navigate' onClick={() => props.changeCard('down')}>Previous</h2>
+            <h2 className='navigate' onClick={() => props.changeCard('up')}>Next</h2>
         </div>
     )
 }
